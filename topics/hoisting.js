@@ -24,7 +24,7 @@
 // greetings();
 
 // var greetings = function () {
-//   name = "kamran";
+//
 //   console.log("First", name);
 // };
 // greetings();
