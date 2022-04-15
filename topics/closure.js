@@ -41,7 +41,7 @@
 // predict output
 // 1)
 // function a() {
-//   for (let i = 1; i <= 5; i++) {
+//   for (var i = 1; i <= 5; i++) {
 //     setTimeout(() => {
 //       console.log(i);
 //     }, i * 1000);
@@ -50,7 +50,7 @@
 // a();
 // !2) solution with only var
 // function a() {
-//   for (let i = 1; i <= 5; i++) {
+//   for (var i = 1; i <= 5; i++) {
 //     function onlyVar(i) {
 //       setTimeout(() => {
 //         console.log(i);
