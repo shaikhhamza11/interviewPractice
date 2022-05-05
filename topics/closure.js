@@ -1,41 +1,41 @@
 //! example 1
 
 // function a() {
-//   let name = "hamza";
+//   let name = "hamza"
 //   return function b() {
-//     return name;
-//   };
+//     return name
+//   }
 // }
-// const c = a()();
-// console.log(c);
+// const c = a()()
+// console.log(c)
 
 // !2)
 // function a() {
 //   let obj = {
 //     name: "hamza",
 //     age: 21,
-//   };
+//   }
 
 //   function b() {
-//     obj = { ...obj, location: "mumbai" };
-//     anotherVariable = "love you";
+//     obj = { ...obj, location: "mumbai" }
+//     anotherVariable = "love you"
 //     return function c() {
-//       console.log(obj, anotherVariable);
-//     };
+//       console.log(obj, anotherVariable)
+//     }
 //   }
-//   b()();
+//   b()()
 // }
-// a();
+// a()
 
 // !3)same example with arrow function and grandparents
 
 // const a = () => {
-//   let name = "john";
-//   return (b = () => (c = () => name));
-// };
+//   let name = "john"
+//   return (b = () => (c = () => name))
+// }
 
-// const z = a()()();
-// console.log(z);
+// const z = a()()()
+// console.log(z)
 
 // !example 4
 // predict output
@@ -43,11 +43,11 @@
 // function a() {
 //   for (var i = 1; i <= 5; i++) {
 //     setTimeout(() => {
-//       console.log(i);
-//     }, i * 1000);
+//       console.log(i)
+//     }, i * 1000)
 //   }
 // }
-// a();
+// a()
 // !2) solution with only var
 // function a() {
 //   for (var i = 1; i <= 5; i++) {
@@ -63,28 +63,28 @@
 
 // !3)
 // let counter = (function () {
-//   var k = 0;
-//   return () => k++;
-// })();
-// console.log(counter());
-// console.log(counter());
-// console.log(counter());
+//   var k = 0
+//   return () => k++
+// })()
+// console.log(counter())
+// console.log(counter())
+// console.log(counter())
 
 // !4)
 // gguess output
 // function createClosure() {
-//   var badArr = [];
+//   var badArr = []
 //   for (var index = 0; index < 5; index++) {
 //     badArr[index] = function () {
-//       return "n:" + index;
-//     };
+//       return "n:" + index
+//     }
 //   }
-//   return badArr;
+//   return badArr
 // }
 
-// const arr = createClosure();
+// const arr = createClosure()
 // for (let element in arr) {
-//   console.log(arr[element]());
+//   console.log(arr[element]())
 // }
 // fix
 
@@ -110,23 +110,23 @@
 // ! example 6
 
 // function a() {
-//   const numArr = [];
-//   const numbers = [1, 2, 3];
+//   const numArr = []
+//   const numbers = [1, 2, 3]
 //   for (var i = 0; i < numbers.length; i++) {
 //     function fixCLosure(index) {
 //       numArr.push(function () {
-//         return "number:" + numbers[index];
-//       });
+//         return "number:" + numbers[index]
+//       })
 //     }
-//     fixCLosure(i);
+//     fixCLosure(i)
 //   }
-//   return numArr;
+//   return numArr
 // }
-// const res = a();
-// console.log(res[0]());
-// console.log(res);
+// const res = a()
+// console.log(res[0]())
+// console.log(res)
 // for (let elem in res) {
-//   console.log(res[elem]());
+//   console.log(res[elem]())
 // }
 
 // !example 7
@@ -134,44 +134,44 @@
 //   return function outer() {
 //     // const myName = "hamza";
 //     return function inner() {
-//       let myName = " batmnan  ";
-//       return `${myName} + '' + ${b}  `;
-//     };
-//   };
+//       let myName = " batmnan  "
+//       return `${myName} + '' + ${b}  `
+//     }
+//   }
 // }
-// const res = outest("Hamza Shaikh")()();
-// console.log(res);
+// const res = outest("Hamza Shaikh")()()
+// console.log(res)
 
 // ! data hiding example
 
 // function counter() {
-//   let a = 0;
+//   let a = 0
 //   return function increment() {
-//     return a++;
-//   };
+//     return (a += 1)
+//   }
 // }
-// const increment = counter();
-// console.log(increment());
-// console.log(increment());
-// console.log(increment());
+// const increment = counter()
+// console.log(increment())
+// console.log(increment())
+// console.log(increment())
 
 // !scalable code
 
 // function Counter() {
-//   let count = 0;
+//   let count = 0
 //   this.increment = function () {
-//     return (count += 1);
-//   };
+//     return (count += 1)
+//   }
 //   this.decrement = function () {
-//     return (count -= 1);
-//   };
+//     return (count -= 1)
+//   }
 // }
 
-// const counter1 = new Counter();
-// console.log(counter1.increment());
-// console.log(counter1.increment());
-// console.log(counter1.increment());
-// console.log(counter1.decrement());
+// const counter1 = new Counter()
+// console.log(counter1.increment())
+// console.log(counter1.increment())
+// console.log(counter1.increment())
+// console.log(counter1.decrement())
 
-// counter2 = new Counter();
-// console.log(counter2.increment());
+// counter2 = new Counter()
+// console.log(counter2.increment())

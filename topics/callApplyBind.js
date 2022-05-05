@@ -72,6 +72,8 @@ Function.prototype.myApply = function (context, args) {
 printDetails.myApply(obj1, [21, "Personal Call method"])
 
 Function.prototype.myBind = function (context, ...args) {
+  console.log(context, "context")
+  console.log(this, "this")
   let callback = this
   return function (...args2) {
     callback.myApply(context, [...args, ...args2])
